@@ -1,7 +1,8 @@
 import './App.css';
 import Home from './home';
 import Mentor from './Mentor';
-import Mentee from './mentee';
+
+import Mentee from './Mentee';
 import EndPage from './EndPage';
 import Year from './year';
 import React, { useState } from 'react';
@@ -34,7 +35,6 @@ function App() {
       <Mentee menteeForm={menteeForm}> </Mentee>
 
       {complete && signUp && !(menteeForm || mentorForm) ? <EndPage name={name} > </EndPage> : <div></div>}
-
     </div>
   );
 }
