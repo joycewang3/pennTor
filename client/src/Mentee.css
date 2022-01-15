@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Source+Code+Pro:wght@200;600&display=swap");
 
 * {
   font-family: Source Code Pro;
-  font-size: 16px;
 }
 
 .pennTor {
@@ -35,7 +34,7 @@
   margin-top: 180px;
 }
 
-.findMentee {
+.findMentor {
   position: absolute;
   width: 1159px;
   height: 35px;
@@ -51,28 +50,12 @@
   color: #000000;
 }
 
-.country {
-  position: absolute;
-  width: 721px;
-  height: 154px;
-  left: 388px;
-  top: 288px;
-
-  background: #e5f6a1;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px #696c71;
-  padding: 10px;
-  padding-left: 20px;
-}
-
-.language {
+.q1Box {
   position: absolute;
   width: 723px;
   height: 195px;
   left: 388px;
-  top: 482px;
+  top: 288px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -83,23 +66,7 @@
   padding-left: 20px;
 }
 
-.study {
-  position: absolute;
-  width: 721px;
-  height: 154px;
-  left: 388px;
-  top: 676px;
-
-  background: #e5f6a1;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px #696c71;
-  padding: 10px;
-  padding-left: 20px;
-}
-
-.frequency {
+.q2Box {
   position: absolute;
   width: 722px;
   height: 148px;
@@ -115,7 +82,7 @@
   padding-left: 20px;
 }
 
-.subjects {
+.q3Box {
   position: absolute;
   width: 721px;
   height: 180px;
@@ -131,7 +98,7 @@
   padding-left: 20px;
 }
 
-.numOfMentee {
+/* .q4Box {
   position: absolute;
   width: 721px;
   height: 148px;
@@ -145,14 +112,14 @@
   box-shadow: 10px 10px #696c71;
   padding: 10px;
   padding-left: 20px;
-}
+} */
 
-.interests {
+.q5Box {
   position: absolute;
   width: 721px;
-  height: 210px;
+  height: 154px;
   left: 388px;
-  top: 1488px;
+  top: 922px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -163,12 +130,44 @@
   padding-left: 20px;
 }
 
-.message {
+.q6Box {
   position: absolute;
   width: 721px;
   height: 154px;
   left: 388px;
-  top: 1735px;
+  top: 1113px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q7Box {
+  position: absolute;
+  width: 721px;
+  height: 210px;
+  left: 388px;
+  top: 1304px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q8Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 388px;
+  top: 1551px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -184,7 +183,8 @@
   width: 155px;
   height: 33px;
   left: 682px;
-  top: 1926px;
+  top: 1742px;
+  bottom: 50px;
 
   background: #dfd3ff;
   border: 2px solid #000000;
@@ -198,7 +198,7 @@
 .submit:hover {
   background: #fdc1c1;
   box-shadow: 5px 5px #696c71;
-
+ 
   font-weight: bold;
   font-size: 20px;
 }
@@ -218,15 +218,6 @@
   line-height: 25px;
 }
 
-#dropDownList {
-  background: #f9f8f7;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  height: 44px;
-  width: 625px;
-  font-size: 15px;
-}
-
 #questionText {
   background: #f9f8f7;
   border: 1px solid #000000;
@@ -234,3 +225,5 @@
   height: 44px;
   width: 625px;
 }
+
+
