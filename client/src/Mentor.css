@@ -1,0 +1,32 @@
+.pennTor {
+    position: absolute;
+    width: 504px;
+    height: 151px;
+    left: 499px;
+    top: 12px;
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 151px;
+    /* identical to box height */
+    color: #DFD3FF;
+    border: 1px solid #000000;
+}
+
+.findMentee {
+    position: absolute;
+    width: 1159px;
+    height: 35px;
+    left: 202px;
+    top: 214px;
+
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+
+    color: #000000;
+
+}
