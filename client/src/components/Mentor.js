@@ -1,4 +1,4 @@
-import "./Mentor.css";
+import "../style/Mentor.css";
 import React from "react";
 
 const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
@@ -11,12 +11,13 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
   };
 
   return (
-    <div>
-      <a className="findMentee">
-        Answer the questions below to help us find your perfect mentee match!
-      </a>
+    <>
+      
       {mentorForm &&
         <div>
+          <div className="findMentee">
+            Answer the questions below to help us find your perfect mentee match!
+          </div>
          <div className="country">
           <label className="question">What country do you consider home?</label>
           <br></br>
@@ -585,8 +586,9 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             Submit
           </button>
         </div>
+      </div>
       }
-    </div>
+    </>
   );
 };
 

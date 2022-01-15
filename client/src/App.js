@@ -1,10 +1,10 @@
 import './App.css';
-import Home from './home';
-import Mentor from './Mentor';
+import Home from './components/Home';
+import Mentor from './components/Mentor';
 
-import Mentee from './Mentee';
-import EndPage from './EndPage';
-import Year from './year';
+import Mentee from './components/Mentee';
+import EndPage from './components/EndPage';
+import Year from './components/Year';
 import React, { useState } from 'react';
 
 function App() {

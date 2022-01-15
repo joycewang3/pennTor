@@ -1,4 +1,4 @@
-import './login.css'
+import '../style/login.css'
 import React from "react"
 
 const LoginPage=()=>{

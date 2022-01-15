@@ -1,5 +1,5 @@
 import React from "react"
-import './secondpage.css'
+import '../style/secondpage.css'
 const SecondPage=()=>{
     
 

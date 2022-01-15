@@ -1,11 +1,10 @@
-import "./EndPage.css";
+import "../style/EndPage.css";
 import React from "react";
-import EndPageBox from './EndPageBox';
 
 const EndPage = ({ name }) => {
   return (
     <div>
-      <a className="thanks">Thanks, {name}! </a>
+      <div className="thanks">Thanks, {name}! </div>
       <div className="box">
         <label className="text">
           Once we’ve found your mentor/mentee match,
