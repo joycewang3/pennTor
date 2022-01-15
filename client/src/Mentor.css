@@ -1,32 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Source+Code+Pro:wght@200;600&display=swap");
+
 .pennTor {
-    position: absolute;
-    width: 504px;
-    height: 151px;
-    left: 499px;
-    top: 12px;
-    font-family: Source Code Pro;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 120px;
-    line-height: 151px;
-    /* identical to box height */
-    color: #DFD3FF;
-    border: 1px solid #000000;
+  position: absolute;
+  width: 504px;
+  height: 151px;
+  left: 499px;
+  top: 12px;
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 151px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* identical to box height */
+  color: #dfd3ff;
 }
 
 .findMentee {
-    position: absolute;
-    width: 1159px;
-    height: 35px;
-    left: 202px;
-    top: 214px;
+  position: absolute;
+  width: 1159px;
+  height: 35px;
+  left: 202px;
+  top: 214px;
 
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
+.q1box {
+  position: absolute;
+  width: 723px;
+  height: 148px;
+  left: 408px;
+  top: 288px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+
+.q2box {
+  position: absolute;
+  width: 722px;
+  height: 148px;
+  left: 414px;
+  top: 488px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+
+.question {
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.checkbox {
     font-family: Source Code Pro;
     font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 25px;
+  }
 
-    color: #000000;
-
+#language {
+  background: #f9f8f7;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  height: 44px;
+  width: 625px;
 }
