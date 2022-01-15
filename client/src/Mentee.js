@@ -153,11 +153,6 @@ const Mentee = () => {
           &nbsp;&nbsp;
           <input type="checkbox" id="frequency" name="frequency5" value="" />
           <label className="checkbox" for="frequency4">
-            Pet Owner
-          </label>{" "}
-          &nbsp;&nbsp;
-          <input type="checkbox" id="frequency" name="frequency5" value="" />
-          <label className="checkbox" for="frequency4">
             Athlete
           </label>{" "}
           &nbsp;&nbsp;
