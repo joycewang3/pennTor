@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Source+Code+Pro:wght@200;600&display=swap");
+
+* {
+  font-family: Source Code Pro;
+}
+
+.pennTor {
+  position: absolute;
+  width: 504px;
+  height: 151px;
+  left: 499px;
+  top: 12px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 151px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* identical to box height */
+  color: #dfd3ff;
+}
+
+.Tor {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 151px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* identical to box height */
+  color: #e5f6a1;
+}
+
+.linedown {
+  margin-top: 180px;
+}
+
+.findMentee {
+  position: absolute;
+  width: 1159px;
+  height: 35px;
+  left: 202px;
+  top: 214px;
+
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
+.q1Box {
+  position: absolute;
+  width: 723px;
+  height: 195px;
+  left: 388px;
+  top: 288px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.q2Box {
+  position: absolute;
+  width: 722px;
+  height: 148px;
+  left: 388px;
+  top: 520px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q3Box {
+  position: absolute;
+  width: 721px;
+  height: 180px;
+  left: 388px;
+  top: 705px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q4Box {
+  position: absolute;
+  width: 721px;
+  height: 148px;
+  left: 388px;
+  top: 922px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q5Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 388px;
+  top: 1107px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q6Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 388px;
+  top: 1298px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q7Box {
+  position: absolute;
+  width: 721px;
+  height: 210px;
+  left: 388px;
+  top: 1488px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.q8Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 388px;
+  top: 1735px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.submit {
+  position: absolute;
+  width: 155px;
+  height: 33px;
+  left: 682px;
+  top: 1926px;
+  bottom: 50px;
+
+  background: #dfd3ff;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background: #fdc1c1;
+  box-shadow: 5px 5px #696c71;
+ 
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.question {
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.checkbox {
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#questionText {
+  background: #f9f8f7;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  height: 44px;
+  width: 625px;
+}
+
+

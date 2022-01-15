@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,200;1,400&display=swap');
+hr{
+    position: absolute;
+    width: 1511px;
+    height: 0px;
+    left: 2px;
+    top: 60px;
+    
+    border: 1px solid #000000;
+    transform: rotate(-0.04deg);
+}
+*{
+    text-align: center;
+}
+.header{
+
+
+    position: absolute;
+    width: 504px;
+    height: 151px;
+    left: 510px;
+    top: 74px;
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 151px;
+    color: #DFD3FF;
+}
+.header-second{
+        color: green;
+    }
+
+.welcome{
+    position: absolute;
+width: 842px;
+height: 66px;
+left: 314px;
+top: 227px;
+
+font-family: Source Code Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 33px;
+text-align: center;
+
+color: #000000;
+}
+form{
+font-family: Source Code Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 33px;
+display:grid;
+width: 453px;
+height: 392px;
+left: 499px;
+top: 410px;
+  
+}
+.loginFormBack{
+position: absolute;
+width: 453px;
+height: 392px;
+left: 499px;
+top: 410px;
+ background-color: #FDC1C1;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 250ms;
+    grid-column: auto / span 2;
+}
+.userInfo{
+font-family: Source Code Pro;
+font-style: normal;
+font-weight: bold;
+font-family: Source Code Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 33px;
+}
+.fillOut{
+font-family: Source Code Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 33px;
+
+}
+
+.boxToFill{
+
+    width: 365px;
+    height: 39px;
+    left: 542px;
+    top: 475px;
+    
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    
+}
+
+
+  
+
+
+
+
+
+
+
