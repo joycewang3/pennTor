@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,200;1,400&display=swap');
+hr{
+    position: absolute;
+    width: 1511px;
+    height: 0px;
+    left: 2px;
+    top: 60px;
+    
+    border: 1px solid #000000;
+    transform: rotate(-0.04deg);
+}
+*{
+    text-align: center;
+}
+.header{
+
+transform: rotate(-0.04deg);
+    position: absolute;
+    width: 504px;
+    height: 151px;
+    left: 510px;
+    top: 74px;
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 151px;
+    color: #DFD3FF;
+}
