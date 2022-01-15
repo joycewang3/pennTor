@@ -1,5 +1,6 @@
 // Create express app
 const express = require("express");
+require('dotenv').config();
 const path = require("path");
 const cors = require("cors");
 const conn = require("./db-config");
