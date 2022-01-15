@@ -1,19 +1,23 @@
 import "./Mentor.css";
 import React from "react";
 
-const Mentor = () => {
+const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setComplete(true);
+    setMentorForm(false);
+    console.log("do not refresh!!");
+  };
+
   return (
     <div>
-      <header className="pennTor">
-        penn<span className="Tor">Tor</span>
-      </header>
-      <hr className="linedown"></hr>
       <a className="findMentee">
         Answer the questions below to help us find your perfect mentee match!
       </a>
-
-      <form>
-        <div className="country">
+      {mentorForm &&
+        <div>
+         <div className="country">
           <label className="question">What country do you consider home?</label>
           <br></br>
           <br></br>
@@ -577,11 +581,11 @@ const Mentor = () => {
             placeholder=":)))"
             required
           />
+          <button type="submit" value="submit" className="submit" onClick={onSubmit}>
+            Submit
+          </button>
         </div>
-      </form>
-      <button type="button" className="submit" onClick="submitFunction()">
-        Submit!
-      </button>
+      }
     </div>
   );
 };

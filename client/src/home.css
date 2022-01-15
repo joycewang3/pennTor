@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+* {
+  font-family: Source Code Pro;
+  background-color: #F9F8F7;
+  text-align: center;
+}
+
+.desc {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+
+.formInput {
+  padding-bottom: 1em;
+  background-image: none;
+  background-color: #fdc1c1;
+}
+
+#formBox {
+  padding-top: 1em;
+  margin-top: 1em;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: solid 2px;
+  box-shadow: 5px 10px #696c71;
+  padding-bottom: 1em;
+  background-color: #fdc1c1;
+  background-image: none;
+}
+
+#nextBtn {
+  height: 2rem;
+  width: 7rem;
+  border: solid 1px;
+  box-shadow: 2px 2px #696c71;
+  font-size: 16px;
+}
+
+.lbls {
+  background-color: #fdc1c1;
+} 
+
+#nextBtn:hover {
+  background-color: #e5f6a1;
+}
+
+.inputBox {
+  border: solid 1px;
+  width: 70%;
+  height: 1.5rem;
+  padding: 4px;
+  font-size: 16px;
+}
+
+#note {
+  font-size: 10px;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 3rem;
+}
+

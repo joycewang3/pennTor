@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+#line {
+  color: black;
+  position: relative;
+  top: 1em;
+  border: none;
+  height: 0.1em;
+  background: black;
+}
+
+#space {
+  padding-bottom: 150px;
+}
+
+.year {
+  text-align: center;
+}

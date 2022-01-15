@@ -1,21 +1,21 @@
 import "./EndPage.css";
 import React from "react";
-// import ReactDOM from "react-dom";
+import EndPageBox from './EndPageBox';
 
-// const element = <h1>Hello from Create React App</h1>;
-
-// ReactDOM.render(element, document.getElementById("root"));
-
-class EndPage extends React.Component {
-  render() {
-    return (
-      <div>
-        <hr className="line"></hr>
-        <h1 className="header">pennTor</h1>
-        <a className="thanks">Thanks, Joyce!</a>
+const EndPage = ({ name }) => {
+  return (
+    <div>
+      <a className="thanks">Thanks, {name}! </a>
+      <div className="box">
+        <label className="text">
+          Once we’ve found your mentor/mentee match,
+          you’ll receive an email connecting the two of you!
+          Make sure to check your inbox ;)
+        </label>
+        <br></br>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default EndPage;
