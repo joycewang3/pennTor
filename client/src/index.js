@@ -3,14 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import EndPage from './EndPage';
-import EndPageBox from './EndPageBox';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <EndPage />
-    <EndPageBox />
   </React.StrictMode>,
   document.getElementById('root')
 );

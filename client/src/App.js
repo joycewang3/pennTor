@@ -6,7 +6,9 @@ import EndPageBox from './EndPageBox';
 function App() {
   return (
     <div>
-      
+    <Mentor />
+    {/* <EndPage />
+    <EndPageBox /> */}
     </div>
   );
 }

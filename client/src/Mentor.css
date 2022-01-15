@@ -10,7 +10,7 @@
   height: 151px;
   left: 499px;
   top: 12px;
-  font-family: Source Code Pro;
+
   font-style: normal;
   font-weight: bold;
   font-size: 120px;
@@ -18,6 +18,20 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   /* identical to box height */
   color: #dfd3ff;
+}
+
+.Tor {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 151px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* identical to box height */
+  color: #e5f6a1;
+}
+
+.linedown {
+  margin-top: 180px;
 }
 
 .findMentee {
@@ -39,8 +53,8 @@
 .q1Box {
   position: absolute;
   width: 723px;
-  height: 148px;
-  left: 408px;
+  height: 195px;
+  left: 388px;
   top: 288px;
 
   background: #e5f6a1;
@@ -48,15 +62,16 @@
   box-sizing: border-box;
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .q2Box {
   position: absolute;
   width: 722px;
   height: 148px;
-  left: 408px;
-  top: 488px;
+  left: 388px;
+  top: 520px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -64,14 +79,15 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
 }
 
 .q3Box {
   position: absolute;
   width: 721px;
-  height: 154px;
-  left: 408px;
-  top: 688px;
+  height: 180px;
+  left: 388px;
+  top: 705px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -79,14 +95,15 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
 }
 
 .q4Box {
   position: absolute;
   width: 721px;
-  height: 154px;
-  left: 408px;
-  top: 888px;
+  height: 148px;
+  left: 388px;
+  top: 922px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -94,14 +111,15 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
 }
 
 .q5Box {
   position: absolute;
   width: 721px;
   height: 154px;
-  left: 408px;
-  top: 1088px;
+  left: 388px;
+  top: 1107px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -109,14 +127,15 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
 }
 
 .q6Box {
   position: absolute;
   width: 721px;
   height: 154px;
-  left: 408px;
-  top: 1288px;
+  left: 388px;
+  top: 1298px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -124,12 +143,14 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
 }
+
 .q7Box {
   position: absolute;
   width: 721px;
-  height: 154px;
-  left: 408px;
+  height: 210px;
+  left: 388px;
   top: 1488px;
 
   background: #e5f6a1;
@@ -138,13 +159,15 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
 }
+
 .q8Box {
   position: absolute;
   width: 721px;
   height: 154px;
-  left: 408px;
-  top: 1688px;
+  left: 388px;
+  top: 1735px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -152,6 +175,32 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding: 10px;
+  padding-left: 20px;
+}
+
+.submit {
+  position: absolute;
+  width: 155px;
+  height: 33px;
+  left: 682px;
+  top: 1926px;
+  bottom: 50px;
+
+  background: #dfd3ff;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background: #fdc1c1;
+  box-shadow: 5px 5px #696c71;
+ 
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .question {
@@ -177,30 +226,4 @@
   width: 625px;
 }
 
-.submit {
-  position: absolute;
-  width: 155px;
-  height: 33px;
-  left: 682px;
-  top: 1888px;
 
-  background: #ffffff;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.submit:hover {
-  background: #dfd3ff;
-  box-shadow: 5px 5px #696c71;
- 
-  font-weight: bold;
-  font-size: 20px;
-}
-
-form {
-  padding-bottom: 50px;
-}

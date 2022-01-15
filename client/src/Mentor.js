@@ -4,8 +4,8 @@ import React from "react";
 const Mentor = () => {
   return (
     <div>
-      <header className="pennTor">pennTor</header>
-      
+      <header className="pennTor">penn<span className="Tor">Tor</span></header>
+      <hr className="linedown"></hr>
       <a className="findMentee">
         Answer the questions below to help us find your perfect mentee match!
       </a>
@@ -25,54 +25,6 @@ const Mentor = () => {
             name="language"
             size="90"
             placeholder="e.g. English, French, Spanish, Chinese, etc."
-            required
-          />
-        </div>
-        <div className="q1Box">
-          <label className="question">
-            What languages are you able to provide mentorship in? (Note: Please
-            ensure that you are fluent in the language as you will be expected
-            to provide mentorship to a (likely) native speaker)
-          </label>
-          <br></br>
-          <br></br>
-          <input
-            type="text"
-            id="questionText"
-            name="language"
-            size="90"
-            required
-          />
-        </div>
-        <div className="q1Box">
-          <label className="question">
-            What languages are you able to provide mentorship in? (Note: Please
-            ensure that you are fluent in the language as you will be expected
-            to provide mentorship to a (likely) native speaker)
-          </label>
-          <br></br>
-          <br></br>
-          <input
-            type="text"
-            id="questionText"
-            name="language"
-            size="90"
-            required
-          />
-        </div>
-        <div className="q1Box">
-          <label className="question">
-            What languages are you able to provide mentorship in? (Note: Please
-            ensure that you are fluent in the language as you will be expected
-            to provide mentorship to a (likely) native speaker)
-          </label>
-          <br></br>
-          <br></br>
-          <input
-            type="text"
-            id="questionText"
-            name="language"
-            size="90"
             required
           />
         </div>
@@ -182,6 +134,7 @@ const Mentor = () => {
             id="questionText"
             name="language"
             size="90"
+            placeholder="e.g. National Taiwan University, International Business"
             required
           />
         </div>
@@ -197,6 +150,7 @@ const Mentor = () => {
             id="questionText"
             name="language"
             size="90"
+            placeholder="e.g. Taipei, Taiwan"
             required
           />
         </div>
@@ -226,7 +180,7 @@ const Mentor = () => {
           <label className="checkbox" for="frequency4">
             Gardener
           </label>{" "}
-          &nbsp;&nbsp;
+          <br></br>
           <input type="checkbox" id="frequency" name="frequency5" value="" />
           <label className="checkbox" for="frequency4">
             Pet Owner
@@ -251,7 +205,7 @@ const Mentor = () => {
           <label className="checkbox" for="frequency4">
             Artist
           </label>{" "}
-          &nbsp;&nbsp;
+          <br></br>
           <input type="checkbox" id="frequency" name="frequency5" value="" />
           <label className="checkbox" for="frequency4">
             Health-nut
@@ -271,7 +225,7 @@ const Mentor = () => {
           <label className="checkbox" for="frequency4">
             Beach-lounger
           </label>{" "}
-          &nbsp;&nbsp;
+          <br></br>
           <input type="checkbox" id="frequency" name="frequency5" value="" />
           <label className="checkbox" for="frequency4">
             Class clown
@@ -291,7 +245,7 @@ const Mentor = () => {
           <label className="checkbox" for="frequency4">
             Activist
           </label>{" "}
-          &nbsp;&nbsp;
+          <br></br>
           <input type="checkbox" id="frequency" name="frequency5" value="" />
           <label className="checkbox" for="frequency4">
             Parent
@@ -310,16 +264,15 @@ const Mentor = () => {
             id="questionText"
             name="language"
             size="90"
+            placeholder=":)))"
             required
           />
         </div>
+      </form>
       <button type="button" className="submit" onClick="submitFunction()">
         Submit!
       </button>
-      </form>
-      
     </div>
-    
   );
 };
 
