@@ -21,7 +21,16 @@ let mysqldb;
 // TODO: Will need to alter this for deployment
 
 // TODO: define all endpoints as specified in REST API
-webapp.get("/players", async (req, res) => {
+webapp.get("/api/user/:email", async (req, res) => {
+  try {
+    const results = await dbOperations.getUserByEmail(mysqldb, req.params.email);
+    res.status(200).json(results);
+  } catch (err) {
+    res.status(400).json({ error: "bad url" });
+  }
+});
+
+/* webapp.get("/players", async (req, res) => {
   try {
     const results = await dbOperations.getAllPlayers(mysqldb);
     res.status(200).json(results);
@@ -30,7 +39,7 @@ webapp.get("/players", async (req, res) => {
   }
 });
 
-webapp.post("/player", async (req, res) => {
+ webapp.post("/player", async (req, res) => {
   try {
     if (req.body.name === undefined || req.body.maxpoints === undefined) {
       res.status(400).json({ error: "invalid input, object invalid" });
@@ -110,7 +119,7 @@ webapp.get("/leaders/:n", async (req, res) => {
   } catch (err) {
     res.status(400).json({ error: "bad url" });
   }
-});
+}); */
 
 // Default response for any other request
 webapp.use((_req, res) => {

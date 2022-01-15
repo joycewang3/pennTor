@@ -1,3 +1,14 @@
+const getUserByEmail = async (db, email) => {
+  const query = "SELECT * FROM sys.user WHERE email=?";
+  const params = [email];
+  try {
+    const [rows] = await db.execute(query, params);
+    return rows;
+  } catch (err) {
+    throw new Error("Query error: get all players failed");
+  }
+};
+
 const getAllPlayers = async (db) => {
   const query = "SELECT * FROM celebrity.players";
   try {
@@ -71,5 +82,5 @@ const checkDuplicate = async (db, name) => {
 };
 
 module.exports = {
-  getAllPlayers, getPlayer, addPlayer, updatePlayer, deletePlayer, getLeaders, checkDuplicate,
+  getAllPlayers, getPlayer, addPlayer, updatePlayer, deletePlayer, getLeaders, checkDuplicate, getUserByEmail
 };
