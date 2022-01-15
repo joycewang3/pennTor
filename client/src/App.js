@@ -3,7 +3,6 @@ import Mentor from './Mentor';
 
 function App() {
   return (
-
     <div>
       <Mentor/>
     </div>

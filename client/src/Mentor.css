@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Source+Code+Pro:wght@200;600&display=swap");
 
+* {
+  font-family: Source Code Pro;
+}
+
 .pennTor {
   position: absolute;
   width: 504px;
@@ -32,7 +36,7 @@
   color: #000000;
 }
 
-.q1box {
+.q1Box {
   position: absolute;
   width: 723px;
   height: 148px;
@@ -47,12 +51,100 @@
   padding: 10px;
 }
 
-.q2box {
+.q2Box {
   position: absolute;
   width: 722px;
   height: 148px;
-  left: 414px;
+  left: 408px;
   top: 488px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+
+.q3Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 408px;
+  top: 688px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+
+.q4Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 408px;
+  top: 888px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+
+.q5Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 408px;
+  top: 1088px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+
+.q6Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 408px;
+  top: 1288px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+.q7Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 408px;
+  top: 1488px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+}
+.q8Box {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 408px;
+  top: 1688px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -71,16 +163,44 @@
 }
 
 .checkbox {
-    font-family: Source Code Pro;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 25px;
-  }
+  font-family: Source Code Pro;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
 
-#language {
+#questionText {
   background: #f9f8f7;
   border: 1px solid #000000;
   box-sizing: border-box;
   height: 44px;
   width: 625px;
+}
+
+.submit {
+  position: absolute;
+  width: 155px;
+  height: 33px;
+  left: 682px;
+  top: 1888px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background: #dfd3ff;
+  box-shadow: 5px 5px #696c71;
+ 
+  font-weight: bold;
+  font-size: 20px;
+}
+
+form {
+  padding-bottom: 50px;
 }
