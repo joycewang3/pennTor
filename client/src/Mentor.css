@@ -55,7 +55,7 @@
   width: 721px;
   height: 154px;
   left: 388px;
-  top: 1298px;
+  top: 288px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -71,7 +71,7 @@
   width: 723px;
   height: 195px;
   left: 388px;
-  top: 288px;
+  top: 482px;
 
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -79,6 +79,22 @@
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px #696c71;
   padding-top: 10px;
+  padding-left: 20px;
+}
+
+.study {
+  position: absolute;
+  width: 721px;
+  height: 154px;
+  left: 388px;
+  top: 676px;
+
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
   padding-left: 20px;
 }
 
@@ -129,24 +145,6 @@
   padding: 10px;
   padding-left: 20px;
 }
-
-.study {
-  position: absolute;
-  width: 721px;
-  height: 154px;
-  left: 388px;
-  top: 1107px;
-
-  background: #e5f6a1;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px #696c71;
-  padding: 10px;
-  padding-left: 20px;
-}
-
-
 
 .interests {
   position: absolute;
@@ -199,7 +197,7 @@
 .submit:hover {
   background: #fdc1c1;
   box-shadow: 5px 5px #696c71;
- 
+
   font-weight: bold;
   font-size: 20px;
 }
@@ -235,5 +233,3 @@
   height: 44px;
   width: 625px;
 }
-
-
