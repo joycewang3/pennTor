@@ -1,99 +1,45 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
-h2{
-    font-family: Source Code Pro;
-    background-color: #F9F8F7;
-    text-align: center;
+h2 {
+    font-size: 25px;
 }
 
-h3{
-
-font-family: Source Code Pro;
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 40px;
-color : black;
+h3 {
+    font-size: 20px;
 }
 
-*content-padding {
-    padding: 10px;
-    overflow:hidden ; /* minds inside and outside floatting elements, fine if no size given */
+.btn2:hover {
+    background-color: #fdc1c1;
+    cursor: pointer;
 }
 
-    .b1{
-        position : absolute;
-        width: 417px;
-    height: 202px;
-    background: #DFD3FF;
-    box-shadow: 5px 5px #696c71;
-    left: 296px;
-    top: 432px;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    backdrop-filter: blur(4px);
-    font-family: Source Code Pro;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 53px;
-    padding-bottom: 1em;
-    background-image: none;
-    
-    
-
-
+.btn1:hover {
+    background-color: #fdc1c1;
+    cursor: pointer;
 }
 
-
-.b2{
-    position : absolute;
-width: 417px;
-height: 202px;
-left: 829px;
-top: 432px;
-box-shadow: 5px 5px #696c71;
-background: #DFD3FF;
-border: 1px solid #000000;
-box-sizing: border-box;
-backdrop-filter: blur(4px);
-font-family: Source Code Pro;
-font-style: normal;
-font-weight: bold;
-font-size: 42px;
-line-height: 53px;
+.btn1 {
+    width: 300px;
+    height: 170px;
+    font-size: 25px;
+    background-color: #e5f6a1;
+    border-color: black;
+    box-shadow: 7px 7px #696c71;
 }
 
-h4{
-    position: absolute;
-width: 346px;
-height: 34px;
-left: 354px;
-top: 666px;
-
-font-family: Source Code Pro;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-
-color: #000000;
+.btn2 {
+    width: 300px;
+    height: 170px;
+    font-size: 25px;
+    background-color: #DFD3FF;
+    border-color: black;
+    box-shadow: 7px 7px #696c71;
+    margin-left: 2em;
 }
-h5{
-    position: absolute;
-width: 346px;
-height: 34px;
-left: 900px;
-top: 665px;
 
-font-family: Source Code Pro;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
-
-color: #000000;
-
-
+.year {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
 }

@@ -2,18 +2,13 @@
 
 * {
   font-family: Source Code Pro;
-  background-color: #F9F8F7;
   text-align: center;
 }
 
 .desc {
-  padding-left: 1em; 
+  padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 0.5em;
-}
-
-form {
-color : 2px dashed #c00;
 }
 
 .formInput {
@@ -22,16 +17,16 @@ color : 2px dashed #c00;
   background-color: #fdc1c1;
 }
 
+
 #formBox {
   padding-top: 1em;
   margin-top: 1em;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
   border: solid 2px;
-  box-shadow: 5px 10px #696c71;
+  box-shadow: 10px 10px #696c71;
   padding-bottom: 1em;
-  color: #fdc1c1;
-  background-image: none;
+  background-color: #fdc1c1;
 }
 
 #nextBtn {
@@ -39,21 +34,21 @@ color : 2px dashed #c00;
   width: 7rem;
   border: solid 1px;
   box-shadow: 2px 2px #696c71;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+#noBtn {
+  height: 2rem;
+  width: 7rem;
+  border: solid 1px;
+  box-shadow: 2px 2px #696c71;
+  font-size: 14px;
+  background-color: #fef9f9cf;
 }
 
 .lbls {
   background-color: #fdc1c1;
-  font-family: Source Code Pro;
-font-style: normal;
-font-weight: bold;
-font-size: 26px;
-line-height: 33px;
-/* identical to box height */
-
-
-color: #000000;
-
+  font-size: 16px;
 } 
 
 #nextBtn:hover {
@@ -77,3 +72,15 @@ h1 {
   font-size: 3rem;
 }
 
+.admin {
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+#adminEmail {
+  height: 8px;
+}
+
+#psw {
+  height: 8px;
+}
