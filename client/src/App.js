@@ -21,7 +21,6 @@ function App() {
       <header className="pennTor">penn<span className="Tor">Tor</span></header>
       <Home signUp={signUp} setYear={setYear} setSignUp={setSignUp} setName={setName} setAdmin={setAdmin}>
       </Home>
-
       {
         (menteeForm || mentorForm) || complete ? <div> </div> :
           <div>

@@ -100,7 +100,7 @@
 
 .message {
   width: 721px;
-  height: 154px;
+  height: 220px;
   margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
@@ -159,6 +159,6 @@
   background: #f9f8f7;
   border: 1px solid #000000;
   box-sizing: border-box;
-  height: 44px;
+  height: 100px;
   width: 625px;
 }
