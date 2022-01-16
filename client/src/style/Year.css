@@ -21,24 +21,28 @@ color : black;
     padding: 10px;
     overflow:hidden ; /* minds inside and outside floatting elements, fine if no size given */
 }
-.b1{
-    position : absolute;
-    width: 417px;
-height: 202px;
-background: #DFD3FF;
-box-shadow: 5px 5px #696c71;
-left: 296px;
-top: 432px;
-border: 1px solid #000000;
-box-sizing: border-box;
-backdrop-filter: blur(4px);
-font-family: Source Code Pro;
-font-style: normal;
-font-weight: bold;
-font-size: 42px;
-line-height: 53px;
-padding-bottom: 1em;
-background-image: none;
+
+    .b1{
+        position : absolute;
+        width: 417px;
+    height: 202px;
+    background: #DFD3FF;
+    box-shadow: 5px 5px #696c71;
+    left: 296px;
+    top: 432px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 53px;
+    padding-bottom: 1em;
+    background-image: none;
+    
+    
+
 
 }
 

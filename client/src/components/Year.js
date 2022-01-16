@@ -1,16 +1,21 @@
-
-import  '../style/Year.css'
-
 const Year = ({ name, signUp, setMenteeForm, setMentorForm, year }) => {
     const selectMentor = () => {
         setMentorForm(true);
+        setMenteeForm(false);
+    }
 
+    const selectMentee = () => {
+        setMenteeForm(true);
+        setMentorForm(false);
+    }
 
+    return (
+        <div>
+            {        
+                signUp && !year &&
         <div className="year">
         <h2> Hi, {name}! </h2>
         <h3> Are you signing up to be a mentor or mentee? </h3>
-        <button onClick={selectMentor}> Mentor </button>
-        <button onClick={selectMentee}> Mentee </button>
 
        <div className="box1">
            <button className="b1" onClick={selectMentor}> Mentor </button> 
@@ -27,6 +32,8 @@ const Year = ({ name, signUp, setMenteeForm, setMentorForm, year }) => {
    </div>
     </div>
     }
+    </div>
+    )
 }
 
 
