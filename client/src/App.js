@@ -17,9 +17,8 @@ function App() {
 
   return (
     <div>
-      <header className="pennTor">penn<span className="Tor">Tor</span></header>
       <hr id="line"></hr>
-      <div id="space"> </div>
+      <header className="pennTor">penn<span className="Tor">Tor</span></header>
       <Home signUp={signUp} setYear={setYear} setSignUp={setSignUp} setName={setName} setAdmin={setAdmin}>
       </Home>
 
@@ -31,7 +30,7 @@ function App() {
       }
 
       <Mentor mentorForm={mentorForm} setComplete={setComplete} setMentorForm={setMentorForm}> </Mentor>
-      <Mentee menteeForm={menteeForm}> </Mentee>
+      <Mentee menteeForm={menteeForm} setComplete={setComplete} setMenteeForm={setMenteeForm}> </Mentee>
 
       {complete && signUp && !(menteeForm || mentorForm) ? <EndPage name={name} > </EndPage> : <div></div>}
     </div>

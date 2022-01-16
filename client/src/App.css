@@ -8,12 +8,7 @@
 }
 
 .pennTor {
-  position: absolute;
-  width: 504px;
-  height: 151px;
-  left: 499px;
-  top: 12px;
-
+  text-align: center;
   font-style: normal;
   font-weight: bold;
   font-size: 120px;
@@ -24,6 +19,7 @@
 }
 
 .Tor {
+  text-align: center;
   font-style: normal;
   font-weight: bold;
   font-size: 120px;
