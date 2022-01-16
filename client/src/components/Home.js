@@ -61,7 +61,17 @@ const Home = ({ signUp, setSignUp, setName, setAdmin, setYear }) => {
                         </form>
 
                     </div>
+                    <div className="Admin">
+                        <h69> For Admins, please log-in here</h69><br></br>
+                        <label for="email" className="littlelbls"> Email:</label>
+                        <input type ="email" id="email" name="email"></input><br></br>
+                        <label for="password" className="littlelbls"> Password:</label>
+                        <input type ="passowrd"  id="" name="psw"></input>
+                        </div>
                 </div>
+
+                
+
             }
 
         </div >

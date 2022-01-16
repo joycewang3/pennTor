@@ -44,6 +44,16 @@ color : 2px dashed #c00;
 
 .lbls {
   background-color: #fdc1c1;
+  font-family: Source Code Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 33px;
+/* identical to box height */
+
+
+color: #000000;
+
 } 
 
 #nextBtn:hover {
