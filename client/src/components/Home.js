@@ -1,11 +1,13 @@
 
+import  '../style/home.css'
+
 const Home = ({ signUp, setSignUp, setName, setAdmin, setYear }) => {
     const handleHide = () => {
         setSignUp(true);
     }
 
     const updateName = e => {
-        setName(e.target.value);
+        setName(e.target.value); 
     }
 
     const handleName = e => {
