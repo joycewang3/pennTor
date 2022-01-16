@@ -13,30 +13,28 @@ const Year = ({ name, signUp, setMenteeForm, setMentorForm, year }) => {
 
     return (
         <div>
-            {        
+            {
                 signUp && !year &&
-        <div className="year">
-        <h2> Hi, {name}! </h2>
-        <h3> Are you signing up to be a mentor or mentee? </h3>
 
-       <div className="box1">
-           <button className="b1" onClick={selectMentor}> Mentor </button> 
-       </div>
-       <br></br>
-       
-       <h4> I’m a 2nd year MCIT student </h4>                       
-            <div className="box2">
-            <button className ="b2" onClick={selectMentee}> Mentee </button>
-       <div className="box2">
+                <div>
+                    <h2> Hi, {name}! </h2>
+                    <h3> Are you signing up to be a mentor or mentee? </h3>
+                    <div className="year">
+                        <div>
+                            <button className="btn1" onClick={selectMentor}> mentor </button>
+                            <p id="secondyr"> I'm a 2nd year MCIT student! </p>
+                        </div>
+                        <div className="column">
+                            <button className="btn2" onClick={selectMentee}> mentee </button>
+                            <p id="firstyr"> I'm a 1st year MCIT student! </p>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
-        <br></br>
-       <h5> I’m a 1nd year MCIT student </h5>
-   </div>
-    </div>
-    }
-    </div>
     )
 }
 
 
 export default Year;
+
