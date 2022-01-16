@@ -33,17 +33,15 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
         console.log("admin set to true");
     }
 
-    const pennEmail = "@seas.upenn.edu"
+    const pennEmail = "@seas.upenn.edu";
 
-    // need to validateEmail 
-    // and check if email is already in database
     const validateEmail = () => {
         if (email.includes(pennEmail)) {
-            setEmail(email);
-            setValidEmail(true);
+            handleHide();
+            handleSubmit();
         } else {
             setValidEmail(false);
-            console.log("EMAIL NOT VALID!");
+            console.log("email is not valid.");
         }
     }
 
@@ -83,13 +81,14 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
 
                             <div className="formInput">
                                 {
-                                    firstName && lastName && email && validEmail && <button value="next" id="nextBtn" onClick={handleSubmit, handleHide}> next </button>
+                                    firstName && lastName && email && < button value="next" id="nextBtn" onClick={validateEmail}> next </button>
                                 }
 
                                 {
                                     !validEmail &&
                                     <div> Did you use your Penn SEAS email? </div>
                                 }
+
                             </div>
                         </div>
 
