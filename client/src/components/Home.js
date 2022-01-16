@@ -94,19 +94,6 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
                         </div>
 
                     </div>
-                    <div className="admin">
-                        For admins, please log-in <a className="admin"> here: </a>
-                        <br></br>
-                        <div>
-                            <label for="email" className="admin"> Email:</label>
-                            <input type="email" name="adminEmail" className="admin"></input>
-                        </div>
-                        <div>
-                            <label for="password" className="admin"> Password:</label>
-                            <input type="passowrd" id="psw" name="psw" className="admin"></input>
-                        </div>
-
-                    </div>
                 </div>
             }
 

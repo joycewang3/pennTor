@@ -71,16 +71,3 @@ h1 {
   padding: 10px;
   font-size: 3rem;
 }
-
-.admin {
-  padding-top: 20px;
-  font-size: 12px;
-}
-
-#adminEmail {
-  height: 8px;
-}
-
-#psw {
-  height: 8px;
-}
