@@ -291,7 +291,6 @@ const Mentor = () => {
             id="checkbox"
             name="language"
             value=""
-            required
           />
           <label className="checkbox" for="Chinese">
             Chinese
@@ -302,7 +301,7 @@ const Mentor = () => {
             id="checkbox"
             name="language"
             value=""
-            required
+            
           />
           <label className="checkbox" for="Spanish">
             Spanish
@@ -313,7 +312,7 @@ const Mentor = () => {
             id="checkbox"
             name="language"
             value=""
-            required
+            
           />
           <label className="checkbox" for="French">
             French
@@ -324,7 +323,7 @@ const Mentor = () => {
             id="checkbox"
             name="language"
             value=""
-            required
+            
           />
           <label className="checkbox" for="German">
             German
@@ -335,7 +334,7 @@ const Mentor = () => {
             id="checkbox"
             name="language"
             value=""
-            required
+            
           />
           <label className="checkbox" for="Arabic">
             Arabic
@@ -346,7 +345,7 @@ const Mentor = () => {
             id="checkbox"
             name="language"
             value=""
-            required
+            
           />
           <label className="checkbox" for="Portuguese">
             Portuguese
@@ -380,7 +379,7 @@ const Mentor = () => {
             id="frequency"
             name="frequency1"
             value=""
-            required
+            
           />
           <label className="checkbox" for="frequency1">
             Every week
@@ -409,22 +408,22 @@ const Mentor = () => {
           </label>
           <br></br>
           <br></br>
-          <input type="checkbox" id="frequency" name="frequency1" value="" required autoFocus/>
+          <input type="checkbox" id="frequency" name="frequency1" value=""/>
           <label className="checkbox" for="frequency1">
             Navigating classes
           </label>{" "}
           &nbsp;&nbsp;
-          <input type="checkbox" id="frequency" name="frequency2" value="" required/>
+          <input type="checkbox" id="frequency" name="frequency2" value=""/>
           <label className="checkbox" for="frequency2">
             Prepping for interviews
           </label>
           <br></br>
-          <input type="checkbox" id="frequency" name="frequency3" value="" required/>
+          <input type="checkbox" id="frequency" name="frequency3" value=""/>
           <label className="checkbox" for="frequency3">
             Staying social
           </label>{" "}
           &nbsp;&nbsp;
-          <input type="checkbox" id="frequency" name="frequency4" value="" required/>
+          <input type="checkbox" id="frequency" name="frequency4" value=""/>
           <label className="checkbox" for="frequency4">
             Career options
           </label>
