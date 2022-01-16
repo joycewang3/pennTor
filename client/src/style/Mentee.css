@@ -1,62 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Source+Code+Pro:wght@200;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 * {
   font-family: Source Code Pro;
-}
-
-.pennTor {
-  position: absolute;
-  width: 504px;
-  height: 151px;
-  left: 499px;
-  top: 12px;
-
-  font-style: normal;
-  font-weight: bold;
-  font-size: 120px;
-  line-height: 151px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  /* identical to box height */
-  color: #dfd3ff;
-}
-
-.Tor {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 120px;
-  line-height: 151px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  /* identical to box height */
-  color: #e5f6a1;
+  font-size: 16px;
+  text-align: center;
 }
 
 .linedown {
   margin-top: 180px;
 }
 
-.findMentor {
-  position: absolute;
-  width: 1159px;
-  height: 35px;
-  left: 202px;
-  top: 214px;
-
+.findMentee {
   font-family: Source Code Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 35px;
-
   color: #000000;
+  padding-bottom: 20px;
 }
 
-.q1Box {
-  position: absolute;
+.country {
+  width: 721px;
+  height: 154px;
+  margin: auto;
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.language {
   width: 723px;
   height: 195px;
-  left: 388px;
-  top: 288px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -66,13 +46,23 @@
   padding-left: 20px;
 }
 
-.q2Box {
-  position: absolute;
+.study {
+  width: 721px;
+  height: 154px;
+  margin: 2.5em auto;
+  background: #e5f6a1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 10px 10px #696c71;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.frequency {
   width: 722px;
   height: 148px;
-  left: 388px;
-  top: 520px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -82,13 +72,10 @@
   padding-left: 20px;
 }
 
-.q3Box {
-  position: absolute;
+.subjects {
   width: 721px;
   height: 180px;
-  left: 388px;
-  top: 705px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -98,61 +85,10 @@
   padding-left: 20px;
 }
 
-/* .q4Box {
-  position: absolute;
-  width: 721px;
-  height: 148px;
-  left: 388px;
-  top: 922px;
-
-  background: #e5f6a1;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px #696c71;
-  padding: 10px;
-  padding-left: 20px;
-} */
-
-.q5Box {
-  position: absolute;
-  width: 721px;
-  height: 154px;
-  left: 388px;
-  top: 922px;
-
-  background: #e5f6a1;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px #696c71;
-  padding: 10px;
-  padding-left: 20px;
-}
-
-.q6Box {
-  position: absolute;
-  width: 721px;
-  height: 154px;
-  left: 388px;
-  top: 1113px;
-
-  background: #e5f6a1;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  box-shadow: 10px 10px #696c71;
-  padding: 10px;
-  padding-left: 20px;
-}
-
-.q7Box {
-  position: absolute;
+.interests {
   width: 721px;
   height: 210px;
-  left: 388px;
-  top: 1304px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -162,13 +98,10 @@
   padding-left: 20px;
 }
 
-.q8Box {
-  position: absolute;
+.message {
   width: 721px;
   height: 154px;
-  left: 388px;
-  top: 1551px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -179,18 +112,13 @@
 }
 
 .submit {
-  position: absolute;
   width: 155px;
   height: 33px;
-  left: 682px;
-  top: 1742px;
-  bottom: 50px;
-
+  margin: 4em auto;
   background: #dfd3ff;
   border: 2px solid #000000;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
-
   font-weight: bold;
   font-size: 20px;
 }
@@ -198,7 +126,7 @@
 .submit:hover {
   background: #fdc1c1;
   box-shadow: 5px 5px #696c71;
- 
+
   font-weight: bold;
   font-size: 20px;
 }
@@ -218,6 +146,15 @@
   line-height: 25px;
 }
 
+#dropDownList {
+  background: #f9f8f7;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  height: 44px;
+  width: 625px;
+  font-size: 15px;
+}
+
 #questionText {
   background: #f9f8f7;
   border: 1px solid #000000;
@@ -225,5 +162,3 @@
   height: 44px;
   width: 625px;
 }
-
-
