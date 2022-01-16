@@ -7,9 +7,13 @@
 }
 
 .desc {
-  padding-left: 1em;
+  padding-left: 1em; 
   padding-right: 1em;
   padding-bottom: 0.5em;
+}
+
+form {
+color : 2px dashed #c00;
 }
 
 .formInput {
@@ -26,7 +30,7 @@
   border: solid 2px;
   box-shadow: 5px 10px #696c71;
   padding-bottom: 1em;
-  background-color: #fdc1c1;
+  color: #fdc1c1;
   background-image: none;
 }
 
