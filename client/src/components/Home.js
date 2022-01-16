@@ -20,9 +20,10 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
         setEmail(e.target.value);
     }
 
-    const handleName = e => {
+    const handleSubmit = e => {
         e.preventDefault();
         setFirstName(e.target.value);
+        setLastName(e.target.value);
         setEmail(e.target.value);
         console.log(e.target.value);
     }
@@ -39,8 +40,9 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
     const validateEmail = () => {
         if (email.includes(pennEmail)) {
             setEmail(email);
+            setValidEmail(true);
         } else {
-            setEmail(null);
+            setValidEmail(false);
             console.log("EMAIL NOT VALID!");
         }
     }
@@ -81,7 +83,12 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
 
                             <div className="formInput">
                                 {
-                                    firstName && lastName && email && <button type="submit" value="next" id="nextBtn" onClick={handleName, handleHide}> next </button>
+                                    firstName && lastName && email && validEmail && <button value="next" id="nextBtn" onClick={handleSubmit, handleHide}> next </button>
+                                }
+
+                                {
+                                    !validEmail &&
+                                    <div> Did you use your Penn SEAS email? </div>
                                 }
                             </div>
                         </div>
