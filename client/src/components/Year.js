@@ -1,3 +1,5 @@
+import '../style/Year.css'
+
 const Year = ({ name, signUp, setMenteeForm, setMentorForm, year }) => {
     const selectMentor = () => {
         setMentorForm(true);
