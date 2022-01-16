@@ -1,7 +1,8 @@
 import "../style/Mentor.css";
 import { useState } from "react";
+import { postMenter } from "../helper/fetchData";
 
-const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
+const Mentor = ({ mentorForm, setComplete, setMentorForm, firstName, lastName, email }) => {
   const [country, setCountry] = useState(null);
   const [languages, setLanguages] = useState([]);
   const [major, setMajor] = useState(null);
@@ -13,10 +14,12 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setComplete(true);
-    setMentorForm(false);
     // call api to backend
-    console.log("do not refresh!!");
+    const mentor = {country, languages, major, frequency, subjects, menteeCount, selfDescriptors, message, firstName, lastName, email,};
+    postMenter(mentor).then(()=>{
+      setComplete(true);
+      setMentorForm(false);
+    });
   };
 
   const handleCountry = (e) => {

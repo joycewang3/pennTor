@@ -1,7 +1,8 @@
 import "../style/Mentee.css";
 import { useState } from "react";
+import { postMentee } from "../helper/fetchData";
 
-const Mentee = ({ menteeForm, setComplete, setMenteeForm }) => {
+const Mentee = ({ menteeForm, setComplete, setMenteeForm, firstName, lastName, email }) => {
   const [country, setCountry] = useState(null);
   const [languages, setLanguages] = useState([]);
   const [major, setMajor] = useState(null);
@@ -12,10 +13,14 @@ const Mentee = ({ menteeForm, setComplete, setMenteeForm }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setComplete(true);
-    setMenteeForm(false);
+    const mentee = {country, languages, major, frequency, subjects, selfDescriptors, message, firstName, lastName, email,};
+    postMentee(mentee).then(()=>{
+      setComplete(true);
+      setMenteeForm(false);
+    });
+    
     // call api to backend
-    console.log("do not refresh!!");
+    
   };
   const handleCountry = (e) => {
     setCountry(e.target.value);

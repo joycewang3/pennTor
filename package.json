@@ -1,0 +1,19 @@
+{
+  "name": "penntor",
+  "version": "1.0.0",
+  "description": "This is our app for hackathon.",
+  "scripts": {
+    "start": "cd server && npm start",
+    "build": "cd server && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joycewang3/pennTor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joycewang3/pennTor/issues"
+  },
+  "homepage": "https://github.com/joycewang3/pennTor#readme"
+}

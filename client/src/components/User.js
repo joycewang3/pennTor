@@ -31,8 +31,8 @@ function User() {
                     </div>
             }
 
-            <Mentor mentorForm={mentorForm} setComplete={setComplete} setMentorForm={setMentorForm}> </Mentor>
-            <Mentee menteeForm={menteeForm} setComplete={setComplete} setMenteeForm={setMenteeForm}> </Mentee>
+            <Mentor mentorForm={mentorForm} setComplete={setComplete} setMentorForm={setMentorForm} firstName={firstName} lastName={lastName} email={email}> </Mentor>
+            <Mentee menteeForm={menteeForm} setComplete={setComplete} setMenteeForm={setMenteeForm} firstName={firstName} lastName={lastName} email={email}> </Mentee>
 
             {complete && signUp && !(menteeForm || mentorForm) ? <EndPage name={firstName} > </EndPage> : <div></div>}
         </div>

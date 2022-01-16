@@ -21,11 +21,7 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
     }
 
     const handleSubmit = e => {
-        e.preventDefault();
-        setFirstName(e.target.value);
-        setLastName(e.target.value);
-        setEmail(e.target.value);
-        console.log(e.target.value);
+        console.log("kk");
     }
 
     const handleAdmin = () => {

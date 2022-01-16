@@ -9,78 +9,30 @@ const getUserByEmail = async (db, email) => {
   }
 };
 
-const getAllPlayers = async (db) => {
-  const query = "SELECT * FROM celebrity.players";
-  try {
-    const [rows] = await db.execute(query);
-    return rows;
-  } catch (err) {
-    throw new Error("Query error: get all players failed");
-  }
-};
-
-const addPlayer = async (db, newPlayer) => {
-  const query = "INSERT  INTO celebrity.players (name , points, maxpoints) VALUES(?, ?, ?)";
-  const params = [newPlayer.name, newPlayer.points, newPlayer.maxpoints];
+const postMentor = async (db, mentor) => {
+  const query = "INSERT INTO sys.user (firstname, lastname, email, position, matchingnum, country, language, major, frequency, interest, message, topic) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  const params = [mentor.firstName, mentor.lastName, mentor.email, 1, mentor.menteeCount, mentor.country, mentor.languages, mentor.major, mentor.frequency, mentor.selfDescriptors, mentor.message, mentor.subjects];
   try {
     const [row] = await db.execute(query, params);
     return row.insertId;
   } catch (err) {
-    throw new Error("Error: add player failed");
+    throw new Error(err.message);
   }
-};
+}
 
-const getPlayer = async (db, playerId) => {
-  const query = "SELECT * FROM celebrity.players WHERE id=?";
-  try {
-    const [rows] = await db.execute(query, [playerId]);
-    return rows[0];
-  } catch (err) {
-    throw new Error("Query error: get player failed");
-  }
-};
-
-const updatePlayer = async (db, playerId, player) => {
-  const query = "UPDATE celebrity.players SET name=?, points=?, maxpoints=? WHERE id=?";
-  const params = [player.name, player.points, player.maxpoints, playerId];
+const postMentee = async (db, mentee) => {
+  const query = "INSERT INTO sys.user (firstname, lastname, email, position, matchingnum, country, language, major, frequency, interest, message, topic) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  const params = [mentee.firstName, mentee.lastName, mentee.email, 0, 1, mentee.country, mentee.languages, mentee.major, mentee.frequency, mentee.selfDescriptors, mentee.message, mentee.subjects];
   try {
     const [row] = await db.execute(query, params);
-    return row.affectedRows;
+    return row.insertId;
   } catch (err) {
-    throw new Error("Error: update player failed");
+    throw new Error(err.message);
   }
-};
+}
 
-const deletePlayer = async (db, playerId) => {
-  const query = "DELETE FROM celebrity.players WHERE id=?";
-  try {
-    const [row] = await db.execute(query, [playerId]);
-    return row.affectedRows;
-  } catch (err) {
-    throw new Error("Error: delete player failed");
-  }
-};
 
-const getLeaders = async (db, n) => {
-  const query = "SELECT * FROM celebrity.players ORDER BY maxpoints DESC LIMIT ?";
-  try {
-    const [rows] = await db.execute(query, [n]);
-    return rows;
-  } catch (err) {
-    throw new Error("Query error: get leaders failed");
-  }
-};
-
-const checkDuplicate = async (db, name) => {
-  const query = "SELECT * FROM celebrity.players WHERE name=?";
-  try {
-    const [rows] = await db.execute(query, [name]);
-    return rows;
-  } catch (err) {
-    throw new Error("Query error: check duplicate failed");
-  }
-};
 
 module.exports = {
-  getAllPlayers, getPlayer, addPlayer, updatePlayer, deletePlayer, getLeaders, checkDuplicate, getUserByEmail
+  getUserByEmail, postMentor, postMentee
 };

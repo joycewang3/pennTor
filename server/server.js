@@ -5,6 +5,7 @@ const path = require("path");
 const cors = require("cors");
 const conn = require("./db-config");
 const dbOperations = require("./db-operations");
+const { Server } = require("http");
 
 const webapp = express();
 webapp.use(cors());
@@ -14,7 +15,7 @@ webapp.use(
     extended: true,
   }),
 );
-webapp.use(express.static(path.join(__dirname, "./client/build")));
+webapp.use(express.static(path.join(__dirname, "../client/build")));
 // Create connection and connect to host
 let mysqldb;
 // Root endpoint
@@ -27,6 +28,26 @@ webapp.get("/api/user/:email", async (req, res) => {
     res.status(200).json(results);
   } catch (err) {
     res.status(400).json({ error: "bad url" });
+  }
+});
+
+webapp.post("/api/mentor", async (req, res) => {
+  try {
+    await dbOperations.postMentor(mysqldb, req.body).then(() => {
+      res.status(201).json("sucessful");
+    });
+  } catch (err) {
+    res.status(409).json({ error: err.message });
+  }
+});
+
+webapp.post("/api/mentee", async (req, res) => {
+  try {
+    await dbOperations.postMentee(mysqldb, req.body).then(() => {
+      res.status(201).json("sucessful");
+    });
+  } catch (err) {
+    res.status(409).json({ error: err.message });
   }
 });
 
@@ -127,7 +148,7 @@ webapp.use((_req, res) => {
 });
 
 webapp.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 // Start server
