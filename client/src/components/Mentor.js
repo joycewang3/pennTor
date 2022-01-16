@@ -1,18 +1,78 @@
 import "../style/Mentor.css";
-import React from "react";
+import { useState } from 'react';
 
 const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
+
+  const [country, setCountry] = useState(null);
+  const [languages, setLanguages] = useState([]);
+  const [major, setMajor] = useState(null);
+  const [frequency, setFrequency] = useState(null);
+  const [subjects, setSubjects] = useState([]);
+  const [menteeCount, setMenteeCount] = useState(null);
+  const [selfDescriptors, setSelfDescriptors] = useState([]);
+  const [message, setMessage] = useState(null);
 
   const onSubmit = (e) => {
     e.preventDefault();
     setComplete(true);
     setMentorForm(false);
+    // call api to backend
     console.log("do not refresh!!");
   };
 
+  const handleCountry = (e) => {
+    setCountry(e.target.value);
+  }
+
+  const handleLanguages = (e) => {
+    if (languages.indexOf(e.target.value) >= 0) {
+      setLanguages(languages.filter(lg => lg !== e.target.value));
+    } else {
+      setLanguages(languages => [...languages, e.target.value]);
+    }
+    console.log(languages);
+  }
+
+  const handleMajor = (e) => {
+    setMajor(e.target.value);
+    console.log(e.target.value);
+  }
+
+  const handleFrequency = (e) => {
+    setFrequency(e.target.value);
+    console.log(e.target.value);
+  }
+
+  const handleSubjects = (e) => {
+    if (subjects.indexOf(e.target.value) >= 0) {
+      setSubjects(subjects.filter(sj => sj !== e.target.value));
+    } else {
+      setSubjects(subjects => [...subjects, e.target.value]);
+    }
+    console.log(subjects);
+  }
+
+  const handleMenteeCount = (e) => {
+    setMenteeCount(e.target.value);
+    console.log(menteeCount);
+  }
+
+  const handleSelfDescriptors = (e) => {
+    if (selfDescriptors.indexOf(e.target.value) >= 0) {
+      setSelfDescriptors(selfDescriptors.filter(sd => sd !== e.target.value));
+    } else {
+      setSelfDescriptors(selfDescriptors => [...selfDescriptors, e.target.value]);
+    }
+    console.log(selfDescriptors);
+  }
+
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+    console.log(message);
+  }
+
   return (
     <>
-
       {mentorForm &&
         <div>
           <div className="findMentee">
@@ -22,7 +82,7 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             <label className="question">What country do you consider home?</label>
             <br></br>
             <br></br>
-            <select id="dropDownList" name="country" required>
+            <select id="dropDownList" name="country" required onChange={handleCountry}>
               <option>select country</option>
               <option value="AF">Afghanistan</option>
               <option value="AX">Aland Islands</option>
@@ -295,7 +355,8 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               type="checkbox"
               id="checkbox"
               name="language"
-              value=""
+              value="Chinese"
+              onChange={handleLanguages}
             />
             <label className="checkbox" for="Chinese">
               Chinese
@@ -305,8 +366,8 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               type="checkbox"
               id="checkbox"
               name="language"
-              value=""
-
+              value="Spanish"
+              onChange={handleLanguages}
             />
             <label className="checkbox" for="Spanish">
               Spanish
@@ -316,8 +377,8 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               type="checkbox"
               id="checkbox"
               name="language"
-              value=""
-
+              value="French"
+              onChange={handleLanguages}
             />
             <label className="checkbox" for="French">
               French
@@ -327,8 +388,8 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               type="checkbox"
               id="checkbox"
               name="language"
-              value=""
-
+              value="German"
+              onChange={handleLanguages}
             />
             <label className="checkbox" for="German">
               German
@@ -338,7 +399,7 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               type="checkbox"
               id="checkbox"
               name="language"
-              value=""
+              value="Arabic"
 
             />
             <label className="checkbox" for="Arabic">
@@ -349,8 +410,8 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               type="checkbox"
               id="checkbox"
               name="language"
-              value=""
-
+              value="Portugese"
+              onChange={handleLanguages}
             />
             <label className="checkbox" for="Portuguese">
               Portuguese
@@ -362,7 +423,7 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             <label className="question">What did you study?</label>
             <br></br>
             <br></br>
-            <select id="dropDownList" name="major" required>
+            <select id="dropDownList" name="major" required onChange={handleMajor}>
               <option value="Econ/Finance">Econ/Finance</option>
               <option value="Engineering">Engineering</option>
               <option value="Science">Science</option>
@@ -379,28 +440,26 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             </label>
             <br></br>
             <br></br>
-            <input
-              type="checkbox"
-              id="frequency"
-              name="frequency1"
-              value=""
 
+            <input type="checkbox" id="frequency"
+              name="frequency1"
+              value="weekly"
             />
-            <label className="checkbox" for="frequency1">
+            <label className="checkbox" for="frequency1" value="weekly" onChange={handleFrequency}>
               Every week
             </label>
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency2" value="" />
+            <input type="checkbox" id="frequency" name="frequency2" value="biweekly" onChange={handleFrequency} />
             <label className="checkbox" for="frequency2">
               Every other week
             </label>
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency3" value="" />
+            <input type="checkbox" id="frequency" name="frequency3" value="monthly" onChange={handleFrequency} />
             <label className="checkbox" for="frequency3">
               Every month
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency4" value="" />
+            <input type="checkbox" id="frequency" name="frequency4" value="adhoc" onChange={handleFrequency} />
             <label className="checkbox" for="frequency4">
               Ad hoc
             </label>
@@ -413,22 +472,22 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             </label>
             <br></br>
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency1" value="" />
+            <input type="checkbox" id="frequency" name="frequency1" value="classes" onChange={handleSubjects} />
             <label className="checkbox" for="frequency1">
               Navigating classes
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency2" value="" />
+            <input type="checkbox" id="frequency" name="frequency2" value="interviews" onChange={handleSubjects} />
             <label className="checkbox" for="frequency2">
               Prepping for interviews
             </label>
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency3" value="" />
+            <input type="checkbox" id="frequency" name="frequency3" value="social" onChange={handleSubjects} />
             <label className="checkbox" for="frequency3">
               Staying social
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency4" value="" />
+            <input type="checkbox" id="frequency" name="frequency4" value="career" onChange={handleSubjects} />
             <label className="checkbox" for="frequency4">
               Career options
             </label>
@@ -441,27 +500,27 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             </label>
             <br></br>
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency1" value="" />
+            <input type="radio" id="frequency" name="frequency" value="1" onChange={handleMenteeCount} />
             <label className="checkbox" for="frequency1">
               1
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency2" value="" />
+            <input type="radio" id="frequency" name="frequency" value="2" onChange={handleMenteeCount} />
             <label className="checkbox" for="frequency2">
               2
             </label>
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency3" value="" />
+            <input type="radio" id="frequency" name="frequency" value="3" onChange={handleMenteeCount} />
             <label className="checkbox" for="frequency3">
               3
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency4" value="" />
+            <input type="radio" id="frequency" name="frequency" value="4" onChange={handleMenteeCount} />
             <label className="checkbox" for="frequency4">
               4
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="radio" id="frequency" name="frequency" value="5" onChange={handleMenteeCount} />
             <label className="checkbox" for="frequency4">
               5
             </label>{" "}
@@ -474,92 +533,87 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
             </label>
             <br></br>
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency1" value="" />
+            <input type="checkbox" id="frequency" name="frequency1" value="sports" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency1">
               Sports Fan
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency2" value="" />
+            <input type="checkbox" id="frequency" name="frequency2" value="music" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency2">
               Musician
             </label>
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency3" value="" />
+            <input type="checkbox" id="frequency" name="frequency3" value="social" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency3">
               Social butterfly
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency4" value="" />
+            <input type="checkbox" id="frequency" name="frequency4" value="gardener" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Gardener
             </label>{" "}
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="pet" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Pet Owner
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
-            <label className="checkbox" for="frequency4">
-              Pet Owner
-            </label>{" "}
-            &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="athlete" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Athlete
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="foodie" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Foodie
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="artist" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Artist
             </label>{" "}
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="health" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Health-nut
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="travel" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Traveler
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="bookworm" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Bookworm
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="beach" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Beach-lounger
             </label>{" "}
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="clown" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Class clown
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="gamer" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Gamer
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="history" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               History buff
             </label>{" "}
             &nbsp;&nbsp;
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="activist" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Activist
             </label>{" "}
             <br></br>
-            <input type="checkbox" id="frequency" name="frequency5" value="" />
+            <input type="checkbox" id="frequency" name="frequency5" value="parent" onChange={handleSelfDescriptors} />
             <label className="checkbox" for="frequency4">
               Parent
             </label>{" "}
@@ -580,10 +634,15 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm }) => {
               size="90"
               placeholder=":)))"
               required
+              onChange={handleMessage}
             />
-            <button type="submit" value="submit" className="submit" onClick={onSubmit}>
-              Submit
-            </button>
+            {
+              (country !== null) && (menteeCount !== null) && (frequency !== null) && (subjects.length !== 0) && (selfDescriptors.length !== 0) &&
+              <button type="submit" value="submit" className="submit" onClick={onSubmit}>
+                Submit
+              </button>
+            }
+
             <div></div>
           </div>
         </div>
