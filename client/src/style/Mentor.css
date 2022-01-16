@@ -3,6 +3,7 @@
 * {
   font-family: Source Code Pro;
   font-size: 16px;
+  text-align: center;
 }
 
 .linedown {
@@ -10,28 +11,19 @@
 }
 
 .findMentee {
-  position: absolute;
-  width: 1159px;
-  height: 35px;
-  left: 202px;
-  top: 214px;
-
   font-family: Source Code Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 35px;
-
   color: #000000;
+  padding-bottom: 20px;
 }
 
 .country {
-  position: absolute;
   width: 721px;
   height: 154px;
-  left: 388px;
-  top: 288px;
-
+  margin: auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -42,12 +34,9 @@
 }
 
 .language {
-  position: absolute;
   width: 723px;
   height: 195px;
-  left: 388px;
-  top: 482px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -58,12 +47,9 @@
 }
 
 .study {
-  position: absolute;
   width: 721px;
   height: 154px;
-  left: 388px;
-  top: 717px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -74,12 +60,9 @@
 }
 
 .frequency {
-  position: absolute;
   width: 722px;
   height: 148px;
-  left: 388px;
-  top: 911px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -90,12 +73,9 @@
 }
 
 .subjects {
-  position: absolute;
   width: 721px;
   height: 180px;
-  left: 388px;
-  top: 1099px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -106,12 +86,9 @@
 }
 
 .numOfMentee {
-  position: absolute;
   width: 721px;
   height: 148px;
-  left: 388px;
-  top: 1319px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -122,12 +99,9 @@
 }
 
 .interests {
-  position: absolute;
   width: 721px;
   height: 210px;
-  left: 388px;
-  top: 1507px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -138,12 +112,9 @@
 }
 
 .message {
-  position: absolute;
   width: 721px;
   height: 154px;
-  left: 388px;
-  top: 1757px;
-
+  margin: 2.5em auto;
   background: #e5f6a1;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -154,17 +125,13 @@
 }
 
 .submit {
-  position: absolute;
   width: 155px;
   height: 33px;
-  left: 682px;
-  top: 2000px;
-
+  margin: 4em auto;
   background: #dfd3ff;
   border: 2px solid #000000;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
-
   font-weight: bold;
   font-size: 20px;
 }

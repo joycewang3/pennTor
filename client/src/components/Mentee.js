@@ -11,7 +11,7 @@ const Mentee = ({ menteeForm, setComplete, setMenteeForm }) => {
 
   return (
     <>
-      {menteeForm && 
+      {menteeForm &&
         <div>
           <div className="findMentor">
             Answer the questions below to help us find your perfect mentor
@@ -518,6 +518,7 @@ const Mentee = ({ menteeForm, setComplete, setMenteeForm }) => {
             >
               Submit
             </button>
+            <div></div>
           </div>
         </div>
       }
