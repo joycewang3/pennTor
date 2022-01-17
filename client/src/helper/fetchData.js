@@ -20,4 +20,32 @@ async function getMentees(){
     return result.data;
 }
 
-export {postMentee, postMenter, getMentees, getMentors};
+
+async function postFinalMatch(matchDict) {
+    try {
+    //   const arr = [];
+    //   await Promise.all(matchDict.map(async (match) => {
+    //     const response = await axios.post("http://localhost:5000/api/matches", match);
+    //     if (response.status !== 200) {
+    //       throw new Error(response.statusText);
+    //     }
+    //     // const { data } = await response;
+    //     arr.push(match);
+    //   }));
+    //   return arr;
+    for(var i = 0;i<matchDict.length;i++){
+        await axios.post("http://localhost:5000/api/matches", matchDict[i]);
+    }
+    
+    } catch (error) {
+      throw new Error(error.message);
+    }
+}
+
+
+async function getFinalMatch(){
+    const result = await axios.get("http://localhost:5000/api/matches");
+    return result.data;
+}
+
+export {postMentee, postMenter, getMentees, getMentors, postFinalMatch, getFinalMatch};

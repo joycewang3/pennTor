@@ -1,7 +1,6 @@
 // assume we will have two object passed in, and we want to calculate the score between them:
 //const mentor = {firstname, lastname, email, 1, matchingnum, country, language, major, frequency, interest, message, topic}
 //const mentee = {firstname, lastname, email, 0, 1, country, language, major, frequency, interest, message, topic} 
-
 function calculateCountry (mentor, mentee){
     return mentor.country===mentee.country?1:0;
 }
@@ -71,18 +70,20 @@ function matchMentorsMentees(mentorArray, menteeArray){
     });
 
     let combinedDict = {mentorDict, menteeDict};
-    console.log(combinedDict);
     
     // call matching here
     let mentorPartnerDict = initPartnerDict(mentorArray);
     let menteePartnerDict = initPartnerDict(menteeArray);
     mentorMatch(mentorPartnerDict, menteePartnerDict, combinedDict);
-    console.log("here");
-    console.log(menteePartnerDict);
-    console.log(mentorPartnerDict);
-
     
-    
+    //calling api finalmatch
+    const matchArray = [];
+    mentorArray.forEach((mentor)=>{
+        matchArray.push({mentorid: mentor.iduser, menteeid: mentorPartnerDict[mentor.iduser]});
+    })
+    console.log(matchArray);
+    return matchArray;
+   
 }
 
 function oneToMany (person, arr) {
@@ -128,10 +129,7 @@ function isPartnered (person, partnerDict) {
 }
   
 function mentorMatch (mentorPartnerDict, menteePartnerDict, combinedDict) {
-    let i = 0;
-    while (!partnerStatus(mentorPartnerDict)&&i<100) { // while there is a mentor with no mentee
-        console.log(mentorPartnerDict);
-        i++;
+    while (!partnerStatus(mentorPartnerDict)) { // while there is a mentor with no mentee
         for (let mentor in combinedDict.mentorDict) { // for each mentor
           for (let mentee of combinedDict.mentorDict[mentor]) {   // for each mentee
             const prtnr = isPartnered(mentee, menteePartnerDict); // check if mentee has partner

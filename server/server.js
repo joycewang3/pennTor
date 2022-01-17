@@ -22,14 +22,15 @@ let mysqldb;
 // TODO: Will need to alter this for deployment
 
 // TODO: define all endpoints as specified in REST API
-webapp.get("/api/user/:email", async (req, res) => {
+webapp.get("/api/user/:id", async (req, res) => {
   try {
-    const results = await dbOperations.getUserByEmail(mysqldb, req.params.email);
+    const results = await dbOperations.getUserById(mysqldb, req.params.id);
     res.status(200).json(results);
   } catch (err) {
     res.status(400).json({ error: "bad url" });
   }
 });
+
 
 webapp.post("/api/mentor", async (req, res) => {
   try {
@@ -47,14 +48,23 @@ webapp.post("/api/matches", async (req, res) => {
       res.status(201).json("sucessful");
     });
   } catch (err) {
+    console.log(err.message);
     res.status(409).json({ error: err.message });
+  }
+});
+
+webapp.get("/api/matches", async (req, res) => {
+  try {
+    const results = await dbOperations.getAllMatches(mysqldb);
+    res.status(200).json(results);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
 });
 
 webapp.get("/api/mentors", async (req, res) => {
   try {
     const results = await dbOperations.getMentors(mysqldb);
-    console.log(JSON.parse(results[0].interest));
     res.status(200).json(results);
   } catch (err) {
     res.status(400).json({ error: err.message });
@@ -64,12 +74,13 @@ webapp.get("/api/mentors", async (req, res) => {
 webapp.get("/api/mentees", async (req, res) => {
   try {
     const results = await dbOperations.getMentees(mysqldb);
-    console.log(results);
     res.status(200).json(results);
   } catch (err) {
     res.status(400).json({ error: "bad url" });
   }
 });
+
+
 
 
 /* webapp.get("/players", async (req, res) => {

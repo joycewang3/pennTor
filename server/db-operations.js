@@ -1,11 +1,11 @@
-const getUserByEmail = async (db, email) => {
-  const query = "SELECT * FROM sys.user WHERE email=?";
-  const params = [email];
+const getUserById = async (db, id) => {
+  const query = "SELECT * FROM sys.user WHERE iduser=?";
+  const params = [id];
   try {
     const [rows] = await db.execute(query, params);
     return rows;
   } catch (err) {
-    throw new Error("Query error: get all players failed");
+    throw new Error("Query error: get user failed");
   }
 };
 
@@ -51,7 +51,29 @@ const getMentors = async (db) => {
   }
 }
 
+const postMatches = async (db, matches) => {
+  const query = "INSERT INTO sys.matched (mentorid, menteeid) VALUES(?, ?)";
+  const params = [matches.mentorid, matches.menteeid];
+  try {
+    const [row] = await db.execute(query, params);
+    return row.insertId;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+
+const getAllMatches = async (db) => {
+  const query = "SELECT sys.matched.mentorid, sys.matched.menteeid, mentor.firstname as mentorfirstname, mentor.lastname as mentorlastname, mentee.lastname as menteelastname, mentee.firstname as menteefirstname, mentor.email as mentoremail, mentee.email as menteeemail, mentor.message as mentormessage, mentee.message as menteemessage FROM sys.matched JOIN sys.user mentor ON mentor.iduser = sys.matched.mentorid JOIN sys.user mentee ON mentee.iduser = sys.matched.menteeid";
+  try {
+    const [rows] = await db.execute(query);
+    return rows;
+  } catch (err) {
+    console.log(err.message);
+    throw new Error(err.message);
+  }
+}
+
 
 module.exports = {
-  getUserByEmail, postMentor, postMentee, getMentees, getMentors
+  getUserById, postMentor, postMentee, getMentees, getMentors, postMatches, getAllMatches
 };
