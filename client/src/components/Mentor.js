@@ -445,6 +445,7 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm, firstName, lastName, e
               required
               onChange={handleMajor}
             >
+              <option selected disabled> Select </option>
               <option value="Econ/Finance">Econ/Finance</option>
               <option value="Engineering">Engineering</option>
               <option value="Science">Science</option>
