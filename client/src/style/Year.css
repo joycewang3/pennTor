@@ -34,7 +34,7 @@ h3 {
     background-color: #DFD3FF;
     border-color: black;
     box-shadow: 7px 7px #696c71;
-    margin-left: 2em;
+    margin-left: 2.5em;
 }
 
 .year {
@@ -42,4 +42,8 @@ h3 {
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: center;
+}
+
+#firstyr {
+    margin-left: 5em;
 }
