@@ -20,21 +20,11 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
         setEmail(e.target.value);
     }
 
-    const handleSubmit = e => {
-        console.log("kk");
-    }
-
-    const handleAdmin = () => {
-        setAdmin(true);
-        console.log("admin set to true");
-    }
-
     const pennEmail = "@seas.upenn.edu";
 
     const validateEmail = () => {
         if (email.includes(pennEmail)) {
             handleHide();
-            handleSubmit();
         } else {
             setValidEmail(false);
             console.log("email is not valid.");
@@ -84,14 +74,11 @@ const Home = ({ signUp, setSignUp, setFirstName, setAdmin, firstName, lastName, 
                                     !validEmail &&
                                     <div> Did you use your Penn SEAS email? </div>
                                 }
-
                             </div>
                         </div>
-
                     </div>
                 </div>
             }
-
         </div >
     )
 }
