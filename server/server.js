@@ -108,9 +108,6 @@ webapp.post('/api/sendemails', async (req, res)=>{
 
 });
 
-
-
-
 /* webapp.get("/players", async (req, res) => {
   try {
     const results = await dbOperations.getAllPlayers(mysqldb);
