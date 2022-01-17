@@ -41,15 +41,36 @@ webapp.post("/api/mentor", async (req, res) => {
   }
 });
 
-webapp.post("/api/mentee", async (req, res) => {
+webapp.post("/api/matches", async (req, res) => {
   try {
-    await dbOperations.postMentee(mysqldb, req.body).then(() => {
+    await dbOperations.postMatches(mysqldb, req.body).then(() => {
       res.status(201).json("sucessful");
     });
   } catch (err) {
     res.status(409).json({ error: err.message });
   }
 });
+
+webapp.get("/api/mentors", async (req, res) => {
+  try {
+    const results = await dbOperations.getMentors(mysqldb);
+    console.log(JSON.parse(results[0].interest));
+    res.status(200).json(results);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+webapp.get("/api/mentees", async (req, res) => {
+  try {
+    const results = await dbOperations.getMentees(mysqldb);
+    console.log(results);
+    res.status(200).json(results);
+  } catch (err) {
+    res.status(400).json({ error: "bad url" });
+  }
+});
+
 
 /* webapp.get("/players", async (req, res) => {
   try {

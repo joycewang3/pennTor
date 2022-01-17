@@ -31,8 +31,27 @@ const postMentee = async (db, mentee) => {
   }
 }
 
+const getMentees = async (db) => {
+  const query = "SELECT * FROM sys.user WHERE position=0";
+  try {
+    const [rows] = await db.execute(query);
+    return rows;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
+
+const getMentors = async (db) => {
+  const query = "SELECT * FROM sys.user WHERE position=1";
+  try {
+    const [rows] = await db.execute(query);
+    return rows;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}
 
 
 module.exports = {
-  getUserByEmail, postMentor, postMentee
+  getUserByEmail, postMentor, postMentee, getMentees, getMentors
 };
