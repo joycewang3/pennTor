@@ -175,12 +175,14 @@ webapp.get("/leaders/:n", async (req, res) => {
 }); */
 
 // Default response for any other request
-webapp.use((_req, res) => {
-  res.status(404);
-});
+
 
 webapp.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
+webapp.use((_req, res) => {
+  res.status(404);
 });
 
 // Start server

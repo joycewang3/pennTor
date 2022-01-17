@@ -249,7 +249,7 @@ function mentorMatch (mentorPartnerDict, menteePartnerDict, combinedDict) {
 
 //const mentor = {iduser:1, firstname:"xxxx", lastname:"xxxx", email, position:1, matchingnum, country, language, major, frequency, interest, message, topic}
 
-module.exports = {
+export {
     matchMentorsMentees,
 }
 
