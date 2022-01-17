@@ -13,14 +13,14 @@ const Mentee = ({ menteeForm, setComplete, setMenteeForm, firstName, lastName, e
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const mentee = {country, languages, major, frequency, subjects, selfDescriptors, message, firstName, lastName, email,};
-    postMentee(mentee).then(()=>{
+    const mentee = { country, languages, major, frequency, subjects, selfDescriptors, message, firstName, lastName, email, };
+    postMentee(mentee).then(() => {
       setComplete(true);
       setMenteeForm(false);
     });
-    
+
     // call api to backend
-    
+
   };
   const handleCountry = (e) => {
     setCountry(e.target.value);
@@ -789,7 +789,5 @@ const Mentee = ({ menteeForm, setComplete, setMenteeForm, firstName, lastName, e
     </>
   );
 };
-function submitFunction() {
-  return console.log("mentee form submitted");
-}
+
 export default Mentee;

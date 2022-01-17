@@ -15,8 +15,8 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm, firstName, lastName, e
   const onSubmit = (e) => {
     e.preventDefault();
     // call api to backend
-    const mentor = {country, languages, major, frequency, subjects, menteeCount, selfDescriptors, message, firstName, lastName, email,};
-    postMenter(mentor).then(()=>{
+    const mentor = { country, languages, major, frequency, subjects, menteeCount, selfDescriptors, message, firstName, lastName, email, };
+    postMenter(mentor).then(() => {
       setComplete(true);
       setMentorForm(false);
     });
@@ -859,9 +859,5 @@ const Mentor = ({ mentorForm, setComplete, setMentorForm, firstName, lastName, e
     </>
   );
 };
-
-function submitFunction() {
-  return console.log("mentor form submitted");
-}
 
 export default Mentor;
