@@ -34,6 +34,16 @@ webapp.get("/api/user/:id", async (req, res) => {
 });
 
 
+webapp.post("/api/mentee", async (req, res) => {
+  try {
+    await dbOperations.postMentee(mysqldb, req.body).then(() => {
+      res.status(201).json("sucessful");
+    });
+  } catch (err) {
+    res.status(409).json({ error: err.message });
+  }
+});
+
 webapp.post("/api/mentor", async (req, res) => {
   try {
     await dbOperations.postMentor(mysqldb, req.body).then(() => {
