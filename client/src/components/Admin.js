@@ -1,4 +1,4 @@
-import { getMentees, getMentors, postFinalMatch, getFinalMatch } from "../helper/fetchData";
+import { getMentees, getMentors, postFinalMatch, getFinalMatch, postEmail } from "../helper/fetchData";
 import { matchMentorsMentees } from "../helper/score-cal";
 import { useState, useEffect } from "react";
 
@@ -23,6 +23,7 @@ const Admin = () => {
         postFinalMatch(matchArray).then(() => {
             console.log("heyyy");
             getFinalMatch().then((result) => {
+                postEmail(result);
                 console.log(result);
                 setFinalMatch(result);
             })

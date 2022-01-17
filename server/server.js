@@ -6,6 +6,8 @@ const cors = require("cors");
 const conn = require("./db-config");
 const dbOperations = require("./db-operations");
 const { Server } = require("http");
+const Mailer = require('./mailing/Mailer');
+const emailTemplate = require('./mailing/emailTemplate');
 
 const webapp = express();
 webapp.use(cors());
@@ -78,6 +80,32 @@ webapp.get("/api/mentees", async (req, res) => {
   } catch (err) {
     res.status(400).json({ error: "bad url" });
   }
+});
+
+webapp.post('/api/sendemails', async (req, res)=>{
+  const {mentorfirstname, mentorlastname, menteefirstname, menteelastname, mentormessage, menteemessage, mentoremail, menteeemail} = req.body;
+  const match = {
+    subject:"MCIT Mentor/Mentee Mactching Result",
+    menteeemail,
+    mentoremail, 
+    menteefirstname,
+    mentorfirstname,
+    menteelastname,
+    mentorlastname,
+    mentormessage,
+    menteemessage
+  };
+  
+  //send an email!
+  const mailer = new Mailer(match, emailTemplate(match));
+  try{
+    await mailer.send();
+    res.status(200).json("successful");
+  }catch(err){
+    console.log(err.message);
+    res.status(422).json({error: err.message});
+  }
+
 });
 
 

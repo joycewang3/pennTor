@@ -48,4 +48,17 @@ async function getFinalMatch(){
     return result.data;
 }
 
-export {postMentee, postMenter, getMentees, getMentors, postFinalMatch, getFinalMatch};
+async function postEmail(match){
+
+    try {
+        for(var i = 0;i<match.length;i++){
+            await axios.post("/api/sendemails", match[i]);
+        }
+    
+        } catch (error) {
+          throw new Error(error.message);
+        }
+
+}
+
+export {postMentee, postMenter, getMentees, getMentors, postFinalMatch, getFinalMatch, postEmail};
